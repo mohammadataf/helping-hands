@@ -1,0 +1,51 @@
+<!-- views/lostfound.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lost & Found</title>
+   <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+  <h1 id="top">Lost & Found</h1>
+  <button onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px;">🌓 Toggle Mode</button>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./contacts.html">Contacts</a></li>
+      <li><a href="./roommate.html">Roommate Finder</a></li>
+      <li><a href="./exchange.html">Exchange Board</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <form id="lostFoundForm">
+      <label for="itemType">Item Type:</label>
+    
+      <select id="itemType" required>
+        <option value="Lost">Lost</option>
+        <option value="Found">Found</option>
+      </select><br />
+
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" required /><br />
+
+      <label for="description">Description:</label><br />
+      <textarea id="description" required></textarea><br />
+
+      <label for="contactInfo">Your Contact Info:</label>
+      <input type="text" id="contactInfo" required /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <h4>Recent Reports:</h4>
+    <div id="itemList"></div>
+  </section>
+
+  <script src="../public/js/darkmode.js"></script>
+  <script src="../public/js/lostfound.js"></script>
+</body>
+</html>

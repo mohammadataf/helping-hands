@@ -1,0 +1,33 @@
+<!-- views/contacts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Contacts</title>
+ <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+  <h1 id="top">College Contacts</h1>
+  <button onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px;">🌓 Toggle Mode</button>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./lostfound.html">Lost & Found</a></li>
+      <li><a href="./roommate.html">Roommate Finder</a></li>
+      <li><a href="./exchange.html">Exchange Board</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h3>Search Contacts</h3>
+    <input type="text" id="ContactSearch" placeholder="Enter name to search contacts"/>
+    <ul id="Suggestions"></ul>
+    <div id="ContactInfo"></div>
+  </section>
+
+  <script src="../public/js/darkmode.js"></script>
+  <script src="../public/js/contact.js"></script>
+</body>
+</html>

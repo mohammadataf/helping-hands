@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Prof. Binod Kumar Kanaujia",
+    "designation": "Director",
+    "phone": "0194-2422032",
+    "email": "director@nitsri.ac.in"
+  },
+  {
+    "name": "prof.Abid Bajaj ",
+    "designation": "Dean",
+    "phone": "8765432109"
+  },
+  {
+        "name": "prof.Abdul Liman ",
+    "designation": "Associate Dean",
+    "phone": "6007887651"
+  },
+   {
+        "name": "prof.Shahid Bhatt ",
+    "designation": "Registrar",
+    "phone": "7086978451"
+  },
+   {
+        "name": "prof.Saima qureshi  ",
+    "designation": "Hod Cse",
+    "phone": "8765432109"
+  }
+]
+
+

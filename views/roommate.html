@@ -1,0 +1,64 @@
+<!-- views/roommate.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roommate Finder</title>
+ <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+  <h1 id="top">Roommate Finder</h1>
+  <button onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px;">🌓 Toggle Mode</button>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./contacts.html">Contacts</a></li>
+      <li><a href="./lostfound.html">Lost & Found</a></li>
+      <li><a href="./exchange.html">Exchange Board</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <form action="http://localhost:3000/api/roommate" method="POST" id="roommateForm">
+      <label for="rmName">Your Name:</label>
+      <input type="text" id="rmName" required /><br />
+
+      <label for="rmYear">Year:</label>
+      <select id="rmYear" required>
+        <option value="1st">1st</option>
+        <option value="2nd">2nd</option>
+        <option value="3rd">3rd</option>
+        <option value="4th">4th</option>
+      </select><br />
+
+      <label for="rmBranch">Branch:</label>
+      <input type="text" id="rmBranch" required /><br />
+
+      <label>Roommate Preferences:</label><br />
+      <input type="checkbox" class="rmPref" value="Non-smoker"> Non-smoker<br />
+      <input type="checkbox" class="rmPref" value="Early Riser"> Early Riser<br />
+      <input type="checkbox" class="rmPref" value="Studious"> Studious<br />
+      <input type="checkbox" class="rmPref" value="Enjoys Learning New Skills"> Enjoys Learning New Skills<br />
+      <input type="checkbox" class="rmPref" value="Expects Silence in Room"> Expects Silence in Room<br />
+      <input type="checkbox" class="rmPref" value="Vegetarian"> Vegetarian<br />
+            <input type="checkbox" class="rmPref" value="Non Vegetarian"> Non Vegetarian<br /><br />
+      <input type="checkbox" class="rmPref" value="Clean and Tidy"> Clean and Tidy<br />
+      <input type="checkbox" class="rmPref" value="Social & Friendly"> Social & Friendly<br />
+      <input type="checkbox" class="rmPref" value="Night Owl"> Night Owl<br /><br />
+
+      <label for="rmContact">Contact Info:</label>
+      <input type="text" id="rmContact" required /><br />
+
+      <button type="submit">Post Requirement</button>
+    </form>
+
+    <h4>Available Roommate Posts:</h4>
+    <div id="roommateList"></div>
+  </section>
+
+  <script src="../public/js/darkmode.js"></script>
+  <script src="../public/js/roomate.js"></script>
+</body>
+</html>

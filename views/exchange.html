@@ -1,0 +1,53 @@
+<!-- views/exchange.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exchange Board</title>
+ <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+  <h1 id="top">Exchange Board</h1>
+  <button onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px;">🌓 Toggle Mode</button>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./contacts.html">Contacts</a></li>
+      <li><a href="./lostfound.html">Lost & Found</a></li>
+      <li><a href="./roommate.html">Roommate Finder</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <form action="http://localhost:3000/api/exchange" method="POST"id="exchangeForm">
+      <label for="exName">Your Name:</label>
+      <input type="text" id="exName" required /><br />
+
+      <label for="exType">Type of Post:</label>
+      <select id="exType" required>
+        <option value="Offering">Offering (Give)</option>
+        <option value="Requesting">Requesting (Need)</option>
+      </select><br />
+
+      <label for="exItem">Item:</label>
+      <input type="text" id="exItem" required /><br />
+
+      <label for="exDesc">Description:</label><br />
+      <textarea id="exDesc" rows="3"></textarea><br />
+
+      <label for="exContact">Contact Info:</label>
+      <input type="text" id="exContact" required /><br />
+
+      <button type="submit">Post</button>
+    </form>
+
+    <h4>Available Exchanges:</h4>
+    <div id="exchangeList"></div>
+  </section>
+
+  <script src="../public/js/darkmode.js"></script>
+  <script src="../public/js/exchange.js"></script>
+</body>
+</html>
